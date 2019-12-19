@@ -2,9 +2,17 @@ language: crystal
 services:
   - postgresql
 script:
+  - crystal tool format spec src --check
   - crystal spec
-  # Uncomment the next line if you'd like Travis to check code formatting
-  # - crystal tool format spec src --check
+  - crystal docs
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  project_name: great_idea
+  on:
+    branch: master
+  local_dir: docs
 cache:
   directories:
     - bin/lucky
