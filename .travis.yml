@@ -1,4 +1,5 @@
 language: crystal
+os: linux
 services:
   - postgresql
 script:
@@ -7,8 +8,8 @@ script:
   - crystal docs
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  cleanup: false
+  token: $GITHUB_TOKEN
   project_name: great_idea
   on:
     branch: master
