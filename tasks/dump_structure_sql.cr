@@ -3,7 +3,6 @@ class DumpStructureSql < LuckyCli::Task
   summary "Dumps current database schema to db/structure.sql"
 
   def call
-    ARGV << "db/structure.sql"
-    Db::Schema::Dump.new.call
+    Avram::Migrator::Runner.dump_db
   end
 end
