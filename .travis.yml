@@ -8,7 +8,7 @@ script:
   - crystal docs
 deploy:
   provider: pages
-  cleanup: false
+  skip_cleanup: true
   token: $GITHUB_TOKEN
   project_name: great_idea
   on:
