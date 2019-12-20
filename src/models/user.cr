@@ -8,6 +8,8 @@ class User < BaseModel
     column firstname : String?
     column middlename : String?
     column lastname : String?
+
+    has_many ideas : Idea
   end
 
   def emailable : Carbon::Address

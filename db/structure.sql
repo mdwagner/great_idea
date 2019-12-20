@@ -35,6 +35,44 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: ideas; Type: TABLE; Schema: public; Owner: deploy
+--
+
+CREATE TABLE public.ideas (
+    id bigint NOT NULL,
+    title text,
+    description text,
+    background_color integer DEFAULT 16777215 NOT NULL,
+    created_at timestamp with time zone NOT NULL,
+    updated_at timestamp with time zone NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.ideas OWNER TO deploy;
+
+--
+-- Name: ideas_id_seq; Type: SEQUENCE; Schema: public; Owner: deploy
+--
+
+CREATE SEQUENCE public.ideas_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.ideas_id_seq OWNER TO deploy;
+
+--
+-- Name: ideas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deploy
+--
+
+ALTER SEQUENCE public.ideas_id_seq OWNED BY public.ideas.id;
+
+
+--
 -- Name: migrations; Type: TABLE; Schema: public; Owner: deploy
 --
 
@@ -107,6 +145,13 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- Name: ideas id; Type: DEFAULT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.ideas ALTER COLUMN id SET DEFAULT nextval('public.ideas_id_seq'::regclass);
+
+
+--
 -- Name: migrations id; Type: DEFAULT; Schema: public; Owner: deploy
 --
 
@@ -118,6 +163,14 @@ ALTER TABLE ONLY public.migrations ALTER COLUMN id SET DEFAULT nextval('public.m
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
+
+
+--
+-- Name: ideas ideas_pkey; Type: CONSTRAINT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.ideas
+    ADD CONSTRAINT ideas_pkey PRIMARY KEY (id);
 
 
 --
@@ -137,10 +190,25 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- Name: ideas_user_id_index; Type: INDEX; Schema: public; Owner: deploy
+--
+
+CREATE INDEX ideas_user_id_index ON public.ideas USING btree (user_id);
+
+
+--
 -- Name: users_email_index; Type: INDEX; Schema: public; Owner: deploy
 --
 
 CREATE UNIQUE INDEX users_email_index ON public.users USING btree (email);
+
+
+--
+-- Name: ideas ideas_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: deploy
+--
+
+ALTER TABLE ONLY public.ideas
+    ADD CONSTRAINT ideas_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
 --
