@@ -4,13 +4,13 @@ class IdeaSerializer < BaseSerializer
 
   def render
     {
-      "id" => @idea.id,
-      "title" => @idea.title,
-      "description" => @idea.description,
+      "id"               => @idea.id,
+      "title"            => @idea.title,
+      "description"      => @idea.description,
       "background_color" => @idea.background_color.to_s(16),
-      "created_at" => @idea.created_at,
-      "updated_at" => @idea.updated_at,
-      "user_id" => @idea.user_id,
+      "created_at"       => @idea.created_at,
+      "updated_at"       => @idea.updated_at,
+      "user_id"          => @idea.user_id,
     }
   end
 end
