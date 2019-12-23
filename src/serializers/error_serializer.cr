@@ -12,7 +12,7 @@ class ErrorSerializer < BaseSerializer
   def render
     {
       message: @message,
-      param: @param,
+      param:   @param,
       details: @details,
     }
   end

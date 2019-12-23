@@ -48,7 +48,7 @@ class Errors::Show < Lucky::ErrorAction
     serializer_args = {
       message: message,
       details: details,
-      param: param,
+      param:   param,
     }
     json ErrorSerializer.new(**serializer_args), status: status
   end

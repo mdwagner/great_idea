@@ -1,5 +1,5 @@
 class IdeasSerializer < BaseSerializer
-  def initialize(@ideas : [] of Idea)
+  def initialize(@ideas : Array(Idea))
   end
 
   def render
