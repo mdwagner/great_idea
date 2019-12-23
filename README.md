@@ -10,7 +10,7 @@ An app for keeping track of great ideas!
 1. Migrate database `lucky db.migrate`
 1. Create required seeds `lucky db.create_required_seeds`
 1. Create sample seeds `lucky db.create_sample_seeds`
-1. Restart Hasura (should only need to do this once) `docker-compose restart graphql-engine`
+1. Restart Hasura (should only need to do this once) `lucky hasura.docker_restart`
 1. Start server `lucky dev`
   - Lucky Server: `localhost:5000`
   - Hasura Console: `localhost:8081`
