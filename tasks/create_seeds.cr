@@ -3,7 +3,7 @@ class CreateSeeds < LuckyCli::Task
   summary "Create both required and sample seeds"
 
   def call
-    Db::CreateRequiredSeeds.call
-    Db::CreateSampleSeeds.call
+    Db::CreateRequiredSeeds.new.call
+    Db::CreateSampleSeeds.new.call
   end
 end
