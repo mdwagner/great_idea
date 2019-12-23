@@ -3,6 +3,6 @@ class Api::SignUps::Create < ApiAction
 
   route do
     user = SignUpUser.create!(params)
-    json({token: UserToken.generate(user)})
+    json TokenSerializer.new(user)
   end
 end

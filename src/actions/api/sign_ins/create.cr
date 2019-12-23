@@ -4,7 +4,7 @@ class Api::SignIns::Create < ApiAction
   route do
     SignInUser.new(params).submit do |operation, user|
       if user
-        json({token: UserToken.generate(user)})
+        json TokenSerializer.new(user)
       else
         raise Avram::InvalidOperationError.new(operation)
       end
