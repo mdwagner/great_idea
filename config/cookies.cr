@@ -5,12 +5,12 @@ Lucky::Session.configure do |settings|
 end
 
 Lucky::CookieJar.configure do |settings|
-  settings.on_set = ->(cookie : HTTP::Cookie) {
+  settings.on_set = ->(cookie : HTTP::Cookie) do
     # If ForceSSLHandler is enabled, only send cookies over HTTPS
     cookie.secure(Lucky::ForceSSLHandler.settings.enabled)
 
     # You can set other defaults for cookies here. For example:
     #
     #    cookie.expires(1.year.from_now).domain("mydomain.com")
-  }
+  end
 end
