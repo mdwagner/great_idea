@@ -22,11 +22,11 @@ module Api::Auth::RequireAuthToken
     if auth_token
       "The provided authentication token was incorrect."
     else
-      String.build do |str|
+      String.build { |str|
         str << "An authentication token is required. "
         str << "Please include a token in an 'auth_token' param "
         str << "or 'Authorization' header."
-      end
+      }
     end
   end
 

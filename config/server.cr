@@ -45,9 +45,9 @@ private def secret_key_from_env
 end
 
 private def raise_missing_secret_key_in_production
-  puts String.build do |str|
+  puts String.build { |str|
     str << "Please set the SECRET_KEY_BASE env variable. "
     str << "You can generate a secret key with 'lucky gen.secret_key'"
-  end.colorize.red
+  }.colorize.red
   exit 1
 end

@@ -17,10 +17,10 @@ private def send_grid_key_from_env
 end
 
 private def raise_missing_key_message
-  puts String.build do |str|
+  puts String.build { |str|
     str << "Missing SEND_GRID_KEY. "
     str << "Set the SEND_GRID_KEY env variable to 'unused' "
     str << "if not sending emails, or set the SEND_GRID_KEY ENV var."
-  end.colorize.red
+  }.colorize.red
   exit 1
 end

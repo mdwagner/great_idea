@@ -4,7 +4,7 @@ class IdeasSerializer < BaseSerializer
 
   def render
     {
-      ideas: IdeasSerializer.for_collection(ideas),
+      ideas: IdeaSerializer.for_collection(@ideas),
     }
   end
 end

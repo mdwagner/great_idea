@@ -7,12 +7,12 @@ end
 Habitat.raise_if_missing_settings!
 
 app_server = AppServer.new
-puts String.build do |str|
+puts String.build { |str|
   str << "Listening on http://"
   str << app_server.host
   str << ":"
   str << app_server.port
-end
+}
 
 Signal::INT.trap do
   app_server.close
