@@ -1,7 +1,7 @@
-class Api::SignUps::Create < ApiAction
+class Api::Auth::SignUp < ApiAction
   include Api::Auth::SkipRequireAuthToken
 
-  route do
+  post "/api/auth/sign_up" do
     user = SignUpUser.create!(params)
     json TokenSerializer.new(user)
   end
