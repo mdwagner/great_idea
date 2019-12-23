@@ -7,13 +7,12 @@ An app for keeping track of great ideas!
 1. [Install required dependencies](https://luckyframework.org/guides/getting-started/installing#install-required-dependencies)
 1. Install [Docker](https://docs.docker.com/install/)
 1. Start up docker compose `docker-compose up -d`
-1. Create database `lucky db.create`
 1. Migrate database `lucky db.migrate`
 1. Create seeds `lucky db.create_seeds`
-1. Restart Hasura (should only need to do this once) `lucky hasura.docker_restart`
 1. Start server `lucky dev`
   - Lucky Server: `localhost:5000`
   - Hasura Console: `localhost:8081`
+  - Postgres: `localhost:5434`
 
 ### Learning Lucky
 
