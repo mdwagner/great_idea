@@ -14,14 +14,8 @@ class Db::CreateRequiredSeeds < LuckyCli::Task
     #
     # Use the defaults, but override just the email
     # UserBox.create &.email("me@example.com")
-
-    UserBox.create do |box|
-      box.email "mdwranger@gmail.com"
-      box.encrypted_password Authentic.generate_encrypted_password("Asdf123!")
-      box.firstname "Michael"
-      box.lastname "Wagner"
-    end
-
+    #
+    #
     # Using a SaveOperation:
     #
     # SaveUser.create!(email: "me@example.com", name: "Jane")

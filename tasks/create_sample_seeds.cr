@@ -13,15 +13,23 @@ class Db::CreateSampleSeeds < LuckyCli::Task
     # Use the defaults, but override just the email
     # UserBox.create &.email("me@example.com")
 
-    user = UserQuery.new.email("mdwranger@gmail.com").first?
+    # Create base user
+    user = UserBox.create do |box|
+      box.email "mdwranger@gmail.com"
+      box.encrypted_password Authentic.generate_encrypted_password("Asdf123!")
+      box.firstname "Michael"
+      box.lastname "Wagner"
+    end
 
-    if user
+    # Create 5 ideas for base user
+    (1..5).each do
       IdeaBox.create do |box|
-        box.title "First idea!"
-        box.description "Make more ideas!"
         box.user_id user.id
       end
     end
+
+    # Clean up orphan users from Boxes
+    UserQuery.new.email.not.eq(user.email).delete
 
     # Using a SaveOperation:
     #
