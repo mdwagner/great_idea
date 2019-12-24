@@ -20,6 +20,8 @@ services:
       HASURA_GRAPHQL_DATABASE_URL: "postgres://postgres:@postgres:5432/postgres"
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup,http-log,webhook-log,websocket-log,query-log
+      HASURA_GRAPHQL_ADMIN_SECRET: ${ADMIN_SECRET:-myadminsecretkey}
+      HASURA_GRAPHQL_JWT_SECRET: '{"type":"HS256", "key":"v1muNji4B7/WRFKgR17nJy9HyteK8vQ9S4DB2A6SxyA="}'
 
 volumes:
   db_data:

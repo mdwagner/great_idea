@@ -4,8 +4,7 @@ class UserToken
   ALGORITHM = JWT::Algorithm::HS256
 
   def self.generate(user : User) : String
-    payload = {"user_id" => user.id}
-
+    payload = TokenPayloadSerializer.new(user).render
     settings.stubbed_token || create_token(payload)
   end
 
@@ -19,7 +18,7 @@ class UserToken
       Lucky::Server.settings.secret_key_base,
       ALGORITHM
     )
-    payload["user_id"].to_s.to_i64
+    payload["sub"].to_s.to_i64
   rescue e : JWT::Error
     Lucky.logger.error(jwt_decode_error: e.message)
     nil
