@@ -22,14 +22,11 @@ class Db::CreateSampleSeeds < LuckyCli::Task
     end
 
     # Create 5 ideas for base user
-    (1..5).each do
+    5.times do
       IdeaBox.create do |box|
         box.user_id user.id
       end
     end
-
-    # Clean up orphan users from Boxes
-    UserQuery.new.email.not.eq(user.email).delete
 
     # Using a SaveOperation:
     #

@@ -2,8 +2,10 @@ require "../../../../../spec_helper"
 
 describe Api::V1::Users::Ideas::Index do
   it "returns a list of ideas" do
-    idea = IdeaBox.create
-    user = UserQuery.new.find(idea.user_id)
+    user = UserBox.create
+    idea = IdeaBox.create do |box|
+      box.user_id user.id
+    end
 
     response = AppClient
       .auth(user)
