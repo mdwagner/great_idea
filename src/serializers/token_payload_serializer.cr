@@ -4,14 +4,14 @@ class TokenPayloadSerializer < BaseSerializer
 
   def render
     {
-      sub: sub,
-      name: full_name,
-      iat: iat,
-      exp: exp,
+      sub:                            sub,
+      name:                           full_name,
+      iat:                            iat,
+      exp:                            exp,
       "https://hasura.io/jwt/claims": {
         "x-hasura-allowed-roles": allowed_roles,
-        "x-hasura-default-role": default_role,
-        "x-hasura-user-id": sub,
+        "x-hasura-default-role":  default_role,
+        "x-hasura-user-id":       sub,
       },
     }
   end
