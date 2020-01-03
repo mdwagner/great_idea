@@ -14,6 +14,7 @@ class ImportHasuraMetadata < LuckyCli::Task
       headers: HTTP::Headers{
         "Content-Type" => "application/json",
         "X-Hasura-Role" => "admin",
+        "X-Hasura-Admin-Secret" => Hasura::Env.admin_secret,
       },
       body: {
         "type" => "replace_metadata",
@@ -25,7 +26,12 @@ class ImportHasuraMetadata < LuckyCli::Task
       if response.status_code == 200
         puts "Successfully imported metadata"
       else
-        puts "Failed to import metadata"
+        output = {
+          status: response.status_code,
+          message: "Failed to import metadata",
+          details: response.body_io.gets
+        }
+        puts output.to_json
       end
     end
   end
