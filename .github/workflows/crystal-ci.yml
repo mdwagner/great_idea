@@ -11,6 +11,8 @@ jobs:
         image: postgres
         ports:
           - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -20,7 +22,7 @@ jobs:
     container:
       image: crystallang/crystal
       env:
-        DATABASE_URL: postgres://postgres:@postgres:5432/postgres
+        DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
 
     steps:
     - name: Checkout code
