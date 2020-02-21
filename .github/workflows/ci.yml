@@ -25,6 +25,12 @@ jobs:
         DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
 
     steps:
+    # TODO - should move into custom docker image
+    - name: Install postgres tools
+      run: |
+        apt-get update
+        apt-get install -y postgresql postgresql-contrib
+
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -42,13 +48,6 @@ jobs:
 
     - name: Install deps
       run: shards install
-
-    - name: Verify postgres connection
-      run: |
-        apt-get update
-        apt-get install -y postgresql postgresql-contrib
-        script/create_lucky.sh
-        bin/lucky db.verify_connection
 
     - name: Check file formatting
       run: crystal tool format spec src --check
