@@ -1,10 +1,6 @@
 language: crystal
 os: linux
-services:
-  - postgresql
 script:
-  - crystal tool format spec src --check
-  - crystal spec
   - crystal docs
 deploy:
   provider: pages
