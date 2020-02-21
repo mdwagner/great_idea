@@ -58,3 +58,7 @@ jobs:
 
     - name: Build docs
       run: crystal docs
+
+  # TODO
+  # deploy-docs:
+  #   runs-on: ubuntu-latest
