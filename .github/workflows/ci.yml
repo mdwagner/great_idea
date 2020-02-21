@@ -10,7 +10,7 @@ jobs:
       postgres:
         image: postgres
         ports:
-          - 5432:5432
+          - 5432
         env:
           POSTGRES_PASSWORD: postgres
         options: >-
@@ -22,24 +22,32 @@ jobs:
     container:
       image: crystallang/crystal
       env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+        DATABASE_URL: postgres://postgres:postgres@postgres:${{ job.services.postgres.ports[5432] }}/postgres
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-#       with:
-#         persist-credentials: false
+
+    - name: Cache shards
+      uses: actions/cache@v1
+      env:
+        cache-name: cache-shards
+      with:
+        path: lib
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/shard.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
 
     - name: Install deps
       run: shards install
-
-    - name: Create Lucky CLI
-      run: script/create_lucky.sh
 
     - name: Verify postgres connection
       run: |
         apt-get update
         apt-get install -y postgresql postgresql-contrib
+        script/create_lucky.sh
         bin/lucky db.verify_connection
 
     - name: Check file formatting
@@ -50,12 +58,3 @@ jobs:
 
     - name: Build docs
       run: crystal docs
-
-# TODO - just using travis ci for docs deployments for now
-#     - name: Deploy docs
-#       if: github.ref == 'refs/heads/master' # only run if branch is master
-#       uses: JamesIves/github-pages-deploy-action@releases/v3
-#       with:
-#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#         BRANCH: gh-pages
-#         FOLDER: docs
