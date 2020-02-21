@@ -1,0 +1,35 @@
+name: Crystal CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: crystallang/crystal
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+#       with:
+#         persist-credentials: false
+
+    - name: Install deps
+      run: shards install
+
+    - name: Check file formatting
+      run: crystal tool format spec src --check
+
+    - name: Run tests
+      run: crystal spec
+
+    - name: Build docs
+      run: crystal docs
+
+# TODO - just using travis ci for docs deployments for now
+#     - name: Deploy docs
+#       if: github.ref == 'refs/heads/master' # only run if branch is master
+#       uses: JamesIves/github-pages-deploy-action@releases/v3
+#       with:
+#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#         BRANCH: gh-pages
+#         FOLDER: docs
