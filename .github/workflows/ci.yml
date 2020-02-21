@@ -10,7 +10,7 @@ jobs:
       postgres:
         image: postgres
         ports:
-          - 5432
+          - 5432:5432
         env:
           POSTGRES_PASSWORD: postgres
         options: >-
@@ -22,7 +22,7 @@ jobs:
     container:
       image: crystallang/crystal
       env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:${{ job.services.postgres.ports[5432] }}/postgres
+        DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
 
     steps:
     - name: Checkout code
