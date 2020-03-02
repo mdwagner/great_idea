@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     services:
@@ -25,14 +26,27 @@ jobs:
         DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
 
     steps:
-    # TODO - should move into custom docker image
-    - name: Install postgres tools
+    - name: Install base deps
+      # From luckyframework/avram Dockerfile
       run: |
-        apt-get update
-        apt-get install -y postgresql postgresql-contrib
+        apt-get update && \
+        apt-get install -y libgconf-2-4 curl libreadline-dev && \
+        # postgres 11 installation
+        curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
+        echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" | tee /etc/apt/sources.list.d/postgres.list && \
+        apt-get update && \
+        apt-get install -y postgresql-11 && \
+        rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+    - name: Install rsync
+      run: |
+        apt-get update && \
+        apt-get install -y rsync
 
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Cache shards
       uses: actions/cache@v1
@@ -58,6 +72,10 @@ jobs:
     - name: Build docs
       run: crystal docs
 
-  # TODO
-  # deploy-docs:
-  #   runs-on: ubuntu-latest
+    - name: Deploy docs
+      if: github.ref == 'refs/heads/master' # Only run if branch is master
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs
