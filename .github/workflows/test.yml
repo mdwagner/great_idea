@@ -1,12 +1,11 @@
 name: Test manually workflow
 
-on:
-  repository_dispatch:
-    types: invoke-test
+on: repository_dispatch
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo ${{ github.event }}
       - run: echo "Hello World!"
