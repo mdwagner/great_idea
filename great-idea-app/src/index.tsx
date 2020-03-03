@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-// import { Home } from './screens/Home';
-// import { Details } from './screens/Details';
-// import { Login } from './screens/Login';
+import { Router, Routes, Route } from './components/Router';
+import { Login } from './pages/Login';
 
 export const App: React.FC = () => {
   return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }

@@ -1,62 +1,33 @@
-// import React from 'react';
-// import {
-//   View,
-//   Text,
-//   TextInput,
-//   Button,
-//   StyleSheet
-// } from 'react-native';
-// import { NavigationStackScreenProps } from 'react-navigation-stack';
-// import { Formik } from 'formik';
-// import { FormField } from '../components/FormField';
+import React from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet
+} from 'react-native';
 
-// const initialValues = {
-//   email: '',
-//   password: '',
-// };
+export const Login: React.FC = () => {
+  return (
+    <View style={styles.container}>
+      <View>
+        <Text>Email</Text>
+        <TextInput />
+      </View>
+      <View>
+        <Text>Password</Text>
+        <TextInput />
+      </View>
+      <Button title="Login" onPress={() => void 0} />
+    </View>
+  );
+}
 
-// export const Login: React.FC<NavigationStackScreenProps> = () => {
-//   return (
-//     <Formik
-//       initialValues={initialValues}
-//       onSubmit={(values, formikBag) => {
-//         console.log(values);
-//       }}
-//     >
-//       {({ submitForm }) => {
-//         return (
-//           <View style={styles.container}>
-//             <FormField
-//               name="email"
-//               placeholder="Email"
-//             />
-//             <FormField
-//               name="password"
-//               placeholder="Password"
-//             />
-
-//             <View style={styles.submit}>
-//               <Button
-//                 title="Submit"
-//                 onPress={submitForm}
-//               />
-//             </View>
-//           </View>
-//         );
-//       }}
-//     </Formik>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     display: 'flex',
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   submit: {
-//     flex: 1,
-//     flexDirection: 'row',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
