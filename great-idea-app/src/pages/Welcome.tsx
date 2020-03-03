@@ -1,29 +1,31 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native';
+  Container,
+  Header,
+  Left,
+  Body,
+  Title,
+  Right,
+  Content,
+  H1,
+} from 'native-base';
 
 export const Welcome: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeText}>
-        Welcome to Great Idea!
-      </Text>
-    </View>
+    <Container>
+      <Header>
+        <Left />
+        <Body>
+          <Title>Great Idea!</Title>
+        </Body>
+        <Right />
+      </Header>
+
+      <Content padder>
+        <H1>
+          Welcome to Great Idea!
+        </H1>
+      </Content>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  welcomeText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-});

@@ -1,36 +1,52 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  TextInput,
+  Container,
+  Header,
+  Content,
+  Form,
+  Item,
+  Input,
   Button,
-  StyleSheet
-} from 'react-native';
+  Label,
+  Left,
+  Body,
+  Right,
+  Title,
+} from 'native-base';
+import { Text } from '../components/Text';
 import { useNavigate } from '../components/Router';
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
+  const onSubmit = () => {
+    navigate('/welcome');
+  }
 
   return (
-    <View style={styles.container}>
-      <View>
-        <Text>Email</Text>
-        <TextInput />
-      </View>
-      <View>
-        <Text>Password</Text>
-        <TextInput />
-      </View>
-      <Button title="Login" onPress={() => void navigate('/welcome')} />
-    </View>
+    <Container>
+      <Header>
+        <Left />
+        <Body>
+          <Title>Login</Title>
+        </Body>
+        <Right />
+      </Header>
+
+      <Content>
+        <Form>
+          <Item stackedLabel>
+            <Label>Email</Label>
+            <Input />
+          </Item>
+          <Item stackedLabel last>
+            <Label>Password</Label>
+            <Input />
+          </Item>
+          <Button onPress={onSubmit}>
+            <Text>Sign In</Text>
+          </Button>
+        </Form>
+      </Content>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
