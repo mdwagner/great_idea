@@ -6,8 +6,11 @@ import {
   Button,
   StyleSheet
 } from 'react-native';
+import { useNavigate } from '../components/Router';
 
 export const Login: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <View style={styles.container}>
       <View>
@@ -18,7 +21,7 @@ export const Login: React.FC = () => {
         <Text>Password</Text>
         <TextInput />
       </View>
-      <Button title="Login" onPress={() => void 0} />
+      <Button title="Login" onPress={() => void navigate('/welcome')} />
     </View>
   );
 }
