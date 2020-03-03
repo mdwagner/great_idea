@@ -1,18 +1,13 @@
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { Home } from './screens/Home';
-import { Details } from './screens/Details';
-import { Login } from './screens/Login';
+import React from 'react';
+import { View, Text } from 'react-native';
+// import { Home } from './screens/Home';
+// import { Details } from './screens/Details';
+// import { Login } from './screens/Login';
 
-const AppNavigator = createStackNavigator(
-  {
-    Home,
-    Details,
-    Login,
-  },
-  {
-    initialRouteName: 'Login',
-  }
-);
-
-export const App = createAppContainer(AppNavigator);
+export const App: React.FC = () => {
+  return (
+    <View>
+      <Text>Hello World!</Text>
+    </View>
+  );
+}
