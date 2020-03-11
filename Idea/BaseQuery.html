@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.32.1">
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="">
+  <title>Idea::BaseQuery - </title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="/Api" data-name="api">
+      <a href="../Api.html">Api</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="/Api/Auth" data-name="api::auth">
+      <a href="../Api/Auth.html">Auth</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Api/Auth/Helpers" data-name="api::auth::helpers">
+      <a href="../Api/Auth/Helpers.html">Helpers</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/Me" data-name="api::auth::me">
+      <a href="../Api/Auth/Me.html">Me</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/RequireAuthToken" data-name="api::auth::requireauthtoken">
+      <a href="../Api/Auth/RequireAuthToken.html">RequireAuthToken</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SignIn" data-name="api::auth::signin">
+      <a href="../Api/Auth/SignIn.html">SignIn</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SignUp" data-name="api::auth::signup">
+      <a href="../Api/Auth/SignUp.html">SignUp</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SkipRequireAuthToken" data-name="api::auth::skiprequireauthtoken">
+      <a href="../Api/Auth/SkipRequireAuthToken.html">SkipRequireAuthToken</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Api/V1" data-name="api::v1">
+      <a href="../Api/V1.html">V1</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="/Api/V1/Users" data-name="api::v1::users">
+      <a href="../Api/V1/Users.html">Users</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="/Api/V1/Users/Ideas" data-name="api::v1::users::ideas">
+      <a href="../Api/V1/Users/Ideas.html">Ideas</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Api/V1/Users/Ideas/Index" data-name="api::v1::users::ideas::index">
+      <a href="../Api/V1/Users/Ideas/Index.html">Index</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/ApiAction" data-name="apiaction">
+      <a href="../ApiAction.html">ApiAction</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/AppDatabase" data-name="appdatabase">
+      <a href="../AppDatabase.html">AppDatabase</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/AppDatabase/Settings" data-name="appdatabase::settings">
+      <a href="../AppDatabase/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/AppServer" data-name="appserver">
+      <a href="../AppServer.html">AppServer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/BaseEmail" data-name="baseemail">
+      <a href="../BaseEmail.html">BaseEmail</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/BaseEmail/Settings" data-name="baseemail::settings">
+      <a href="../BaseEmail/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/BaseModel" data-name="basemodel">
+      <a href="../BaseModel.html">BaseModel</a>
+      
+    </li>
+  
+  <li class=" " data-id="/BaseSerializer" data-name="baseserializer">
+      <a href="../BaseSerializer.html">BaseSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Errors" data-name="errors">
+      <a href="../Errors.html">Errors</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Errors/Show" data-name="errors::show">
+      <a href="../Errors/Show.html">Show</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/ErrorSerializer" data-name="errorserializer">
+      <a href="../ErrorSerializer.html">ErrorSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Home" data-name="home">
+      <a href="../Home.html">Home</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Home/Index" data-name="home::index">
+      <a href="../Home/Index.html">Index</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="/Idea" data-name="idea">
+      <a href="../Idea.html">Idea</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Idea/BaseForm" data-name="idea::baseform">
+      <a href="../Idea/BaseForm.html">BaseForm</a>
+      
+    </li>
+  
+  <li class=" current" data-id="/Idea/BaseQuery" data-name="idea::basequery">
+      <a href="../Idea/BaseQuery.html">BaseQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/PrimaryKeyType" data-name="idea::primarykeytype">
+      <a href="../Idea/PrimaryKeyType.html">PrimaryKeyType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/SaveOperation" data-name="idea::saveoperation">
+      <a href="../Idea/SaveOperation.html">SaveOperation</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/Settings" data-name="idea::settings">
+      <a href="../Idea/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/IdeaQuery" data-name="ideaquery">
+      <a href="../IdeaQuery.html">IdeaQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/IdeaSerializer" data-name="ideaserializer">
+      <a href="../IdeaSerializer.html">IdeaSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/IdeasSerializer" data-name="ideasserializer">
+      <a href="../IdeasSerializer.html">IdeasSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/PasswordValidations" data-name="passwordvalidations">
+      <a href="../PasswordValidations.html">PasswordValidations</a>
+      
+    </li>
+  
+  <li class=" " data-id="/RequestPasswordReset" data-name="requestpasswordreset">
+      <a href="../RequestPasswordReset.html">RequestPasswordReset</a>
+      
+    </li>
+  
+  <li class=" " data-id="/ResetPassword" data-name="resetpassword">
+      <a href="../ResetPassword.html">ResetPassword</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SaveIdea" data-name="saveidea">
+      <a href="../SaveIdea.html">SaveIdea</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SignInUser" data-name="signinuser">
+      <a href="../SignInUser.html">SignInUser</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SignUpUser" data-name="signupuser">
+      <a href="../SignUpUser.html">SignUpUser</a>
+      
+    </li>
+  
+  <li class=" " data-id="/TokenPayloadSerializer" data-name="tokenpayloadserializer">
+      <a href="../TokenPayloadSerializer.html">TokenPayloadSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/TokenSerializer" data-name="tokenserializer">
+      <a href="../TokenSerializer.html">TokenSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/User" data-name="user">
+      <a href="../User.html">User</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/User/BaseForm" data-name="user::baseform">
+      <a href="../User/BaseForm.html">BaseForm</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/BaseQuery" data-name="user::basequery">
+      <a href="../User/BaseQuery.html">BaseQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/PrimaryKeyType" data-name="user::primarykeytype">
+      <a href="../User/PrimaryKeyType.html">PrimaryKeyType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/SaveOperation" data-name="user::saveoperation">
+      <a href="../User/SaveOperation.html">SaveOperation</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/UserFromEmail" data-name="userfromemail">
+      <a href="../UserFromEmail.html">UserFromEmail</a>
+      
+    </li>
+  
+  <li class=" " data-id="/UserQuery" data-name="userquery">
+      <a href="../UserQuery.html">UserQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/UserSerializer" data-name="userserializer">
+      <a href="../UserSerializer.html">UserSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/UserToken" data-name="usertoken">
+      <a href="../UserToken.html">UserToken</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/UserToken/Settings" data-name="usertoken::settings">
+      <a href="../UserToken/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Idea::BaseQuery
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Idea/BaseQuery.html">Idea::BaseQuery</a></li><li class="superclass">Avram::Query</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">Avram::Queryable(<a href="../Idea.html">Idea</a>)</li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../IdeaQuery.html">IdeaQuery</a></li>
+    
+  </ul>
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all-class-method" class="signature"><strong>.all</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#find(id)-class-method" class="signature"><strong>.find</strong>(id)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#first-class-method" class="signature"><strong>.first</strong></a>
+        
+          <div class="summary"><p>Returns the first element in the collection.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#first?-class-method" class="signature"><strong>.first?</strong></a>
+        
+          <div class="summary"><p>Returns the first element in the collection.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last-class-method" class="signature"><strong>.last</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last?-class-method" class="signature"><strong>.last?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_with_existing_query(query:Avram::QueryBuilder)-class-method" class="signature"><strong>.new_with_existing_query</strong>(query : Avram::QueryBuilder)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#background_color-instance-method" class="signature"><strong>#background_color</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#background_color(value)-instance-method" class="signature"><strong>#background_color</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#created_at(value)-instance-method" class="signature"><strong>#created_at</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#created_at-instance-method" class="signature"><strong>#created_at</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#database:Avram::Database.class-instance-method" class="signature"><strong>#database</strong> : <span class="t">Avram</span><span class="t">::</span><span class="t">Database</span>.<span class="k">class</span></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#description(value)-instance-method" class="signature"><strong>#description</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#description-instance-method" class="signature"><strong>#description</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#full_join_users-instance-method" class="signature"><strong>#full_join_users</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id(value)-instance-method" class="signature"><strong>#id</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id-instance-method" class="signature"><strong>#id</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inner_join_users-instance-method" class="signature"><strong>#inner_join_users</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join_users-instance-method" class="signature"><strong>#join_users</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_join_users-instance-method" class="signature"><strong>#left_join_users</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#preload_user(preload_query:User::BaseQuery)-instance-method" class="signature"><strong>#preload_user</strong>(preload_query : User::BaseQuery)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#preload_user-instance-method" class="signature"><strong>#preload_user</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#primary_key_name-instance-method" class="signature"><strong>#primary_key_name</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_join_users-instance-method" class="signature"><strong>#right_join_users</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title-instance-method" class="signature"><strong>#title</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title(value)-instance-method" class="signature"><strong>#title</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#updated_at-instance-method" class="signature"><strong>#updated_at</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#updated_at(value)-instance-method" class="signature"><strong>#updated_at</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_id(value)-instance-method" class="signature"><strong>#user_id</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_id-instance-method" class="signature"><strong>#user_id</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#users(&)-instance-method" class="signature"><strong>#users</strong>(&)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_users(assoc_query:User::BaseQuery,auto_inner_join:Bool=true)-instance-method" class="signature"><strong>#where_users</strong>(assoc_query : User::BaseQuery, auto_inner_join : Bool = <span class="n">true</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="macro-summary" class="anchor" href="#macro-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#generate_criteria_method(query_class,name,type)-macro" class="signature"><strong>generate_criteria_method</strong>(query_class, name, type)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="all-class-method">
+      <div class="signature">
+        
+        def self.<strong>all</strong>
+
+        <a class="method-permalink" href="#all-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="find(id)-class-method">
+      <div class="signature">
+        
+        def self.<strong>find</strong>(id)
+
+        <a class="method-permalink" href="#find(id)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="first-class-method">
+      <div class="signature">
+        
+        def self.<strong>first</strong>
+
+        <a class="method-permalink" href="#first-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module Enumerable(<a href="../Idea.html">Idea</a>)
+            </div>
+          
+          <p>Returns the first element in the collection. Raises <code>Enumerable::EmptyError</code>
+if the collection is empty.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="first?-class-method">
+      <div class="signature">
+        
+        def self.<strong>first?</strong>
+
+        <a class="method-permalink" href="#first?-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module Enumerable(<a href="../Idea.html">Idea</a>)
+            </div>
+          
+          <p>Returns the first element in the collection.
+When the collection is empty, returns <code>nil</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last-class-method">
+      <div class="signature">
+        
+        def self.<strong>last</strong>
+
+        <a class="method-permalink" href="#last-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last?-class-method">
+      <div class="signature">
+        
+        def self.<strong>last?</strong>
+
+        <a class="method-permalink" href="#last?-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_with_existing_query(query:Avram::QueryBuilder)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new_with_existing_query</strong>(query : Avram::QueryBuilder)
+
+        <a class="method-permalink" href="#new_with_existing_query(query:Avram::QueryBuilder)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="background_color-instance-method">
+      <div class="signature">
+        
+        def <strong>background_color</strong>
+
+        <a class="method-permalink" href="#background_color-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="background_color(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>background_color</strong>(value)
+
+        <a class="method-permalink" href="#background_color(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="created_at(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>created_at</strong>(value)
+
+        <a class="method-permalink" href="#created_at(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="created_at-instance-method">
+      <div class="signature">
+        
+        def <strong>created_at</strong>
+
+        <a class="method-permalink" href="#created_at-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="database:Avram::Database.class-instance-method">
+      <div class="signature">
+        
+        def <strong>database</strong> : <span class="t">Avram</span><span class="t">::</span><span class="t">Database</span>.<span class="k">class</span>
+
+        <a class="method-permalink" href="#database:Avram::Database.class-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="description(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>description</strong>(value)
+
+        <a class="method-permalink" href="#description(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="description-instance-method">
+      <div class="signature">
+        
+        def <strong>description</strong>
+
+        <a class="method-permalink" href="#description-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="full_join_users-instance-method">
+      <div class="signature">
+        
+        def <strong>full_join_users</strong>
+
+        <a class="method-permalink" href="#full_join_users-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong>(value)
+
+        <a class="method-permalink" href="#id(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong>
+
+        <a class="method-permalink" href="#id-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inner_join_users-instance-method">
+      <div class="signature">
+        
+        def <strong>inner_join_users</strong>
+
+        <a class="method-permalink" href="#inner_join_users-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join_users-instance-method">
+      <div class="signature">
+        
+        def <strong>join_users</strong>
+
+        <a class="method-permalink" href="#join_users-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_join_users-instance-method">
+      <div class="signature">
+        
+        def <strong>left_join_users</strong>
+
+        <a class="method-permalink" href="#left_join_users-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="preload_user(preload_query:User::BaseQuery)-instance-method">
+      <div class="signature">
+        
+        def <strong>preload_user</strong>(preload_query : <a href="../User/BaseQuery.html">User::BaseQuery</a>)
+
+        <a class="method-permalink" href="#preload_user(preload_query:User::BaseQuery)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="preload_user-instance-method">
+      <div class="signature">
+        
+        def <strong>preload_user</strong>
+
+        <a class="method-permalink" href="#preload_user-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="primary_key_name-instance-method">
+      <div class="signature">
+        
+        def <strong>primary_key_name</strong>
+
+        <a class="method-permalink" href="#primary_key_name-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_join_users-instance-method">
+      <div class="signature">
+        
+        def <strong>right_join_users</strong>
+
+        <a class="method-permalink" href="#right_join_users-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title-instance-method">
+      <div class="signature">
+        
+        def <strong>title</strong>
+
+        <a class="method-permalink" href="#title-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>title</strong>(value)
+
+        <a class="method-permalink" href="#title(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="updated_at-instance-method">
+      <div class="signature">
+        
+        def <strong>updated_at</strong>
+
+        <a class="method-permalink" href="#updated_at-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="updated_at(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>updated_at</strong>(value)
+
+        <a class="method-permalink" href="#updated_at(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_id(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>user_id</strong>(value)
+
+        <a class="method-permalink" href="#user_id(value)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_id-instance-method">
+      <div class="signature">
+        
+        def <strong>user_id</strong>
+
+        <a class="method-permalink" href="#user_id-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="users(&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>users</strong>(&)
+
+        <a class="method-permalink" href="#users(&)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_users(assoc_query:User::BaseQuery,auto_inner_join:Bool=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_users</strong>(assoc_query : <a href="../User/BaseQuery.html">User::BaseQuery</a>, auto_inner_join : Bool = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#where_users(assoc_query:User::BaseQuery,auto_inner_join:Bool=true)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="macro-detail" class="anchor" href="#macro-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Detail
+  </h2>
+  
+    <div class="entry-detail" id="generate_criteria_method(query_class,name,type)-macro">
+      <div class="signature">
+        
+        macro <strong>generate_criteria_method</strong>(query_class, name, type)
+
+        <a class="method-permalink" href="#generate_criteria_method(query_class,name,type)-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.32.1">
+
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="">
+  <title>Api::V1::Users::Ideas - </title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="/Api" data-name="api">
+      <a href="../../../Api.html">Api</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="/Api/Auth" data-name="api::auth">
+      <a href="../../../Api/Auth.html">Auth</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Api/Auth/Helpers" data-name="api::auth::helpers">
+      <a href="../../../Api/Auth/Helpers.html">Helpers</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/Me" data-name="api::auth::me">
+      <a href="../../../Api/Auth/Me.html">Me</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/RequireAuthToken" data-name="api::auth::requireauthtoken">
+      <a href="../../../Api/Auth/RequireAuthToken.html">RequireAuthToken</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SignIn" data-name="api::auth::signin">
+      <a href="../../../Api/Auth/SignIn.html">SignIn</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SignUp" data-name="api::auth::signup">
+      <a href="../../../Api/Auth/SignUp.html">SignUp</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Api/Auth/SkipRequireAuthToken" data-name="api::auth::skiprequireauthtoken">
+      <a href="../../../Api/Auth/SkipRequireAuthToken.html">SkipRequireAuthToken</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="/Api/V1" data-name="api::v1">
+      <a href="../../../Api/V1.html">V1</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="/Api/V1/Users" data-name="api::v1::users">
+      <a href="../../../Api/V1/Users.html">Users</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="/Api/V1/Users/Ideas" data-name="api::v1::users::ideas">
+      <a href="../../../Api/V1/Users/Ideas.html">Ideas</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Api/V1/Users/Ideas/Index" data-name="api::v1::users::ideas::index">
+      <a href="../../../Api/V1/Users/Ideas/Index.html">Index</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/ApiAction" data-name="apiaction">
+      <a href="../../../ApiAction.html">ApiAction</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/AppDatabase" data-name="appdatabase">
+      <a href="../../../AppDatabase.html">AppDatabase</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/AppDatabase/Settings" data-name="appdatabase::settings">
+      <a href="../../../AppDatabase/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/AppServer" data-name="appserver">
+      <a href="../../../AppServer.html">AppServer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/BaseEmail" data-name="baseemail">
+      <a href="../../../BaseEmail.html">BaseEmail</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/BaseEmail/Settings" data-name="baseemail::settings">
+      <a href="../../../BaseEmail/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/BaseModel" data-name="basemodel">
+      <a href="../../../BaseModel.html">BaseModel</a>
+      
+    </li>
+  
+  <li class=" " data-id="/BaseSerializer" data-name="baseserializer">
+      <a href="../../../BaseSerializer.html">BaseSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Errors" data-name="errors">
+      <a href="../../../Errors.html">Errors</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Errors/Show" data-name="errors::show">
+      <a href="../../../Errors/Show.html">Show</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/ErrorSerializer" data-name="errorserializer">
+      <a href="../../../ErrorSerializer.html">ErrorSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Home" data-name="home">
+      <a href="../../../Home.html">Home</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Home/Index" data-name="home::index">
+      <a href="../../../Home/Index.html">Index</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Idea" data-name="idea">
+      <a href="../../../Idea.html">Idea</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Idea/BaseForm" data-name="idea::baseform">
+      <a href="../../../Idea/BaseForm.html">BaseForm</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/BaseQuery" data-name="idea::basequery">
+      <a href="../../../Idea/BaseQuery.html">BaseQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/PrimaryKeyType" data-name="idea::primarykeytype">
+      <a href="../../../Idea/PrimaryKeyType.html">PrimaryKeyType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/SaveOperation" data-name="idea::saveoperation">
+      <a href="../../../Idea/SaveOperation.html">SaveOperation</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Idea/Settings" data-name="idea::settings">
+      <a href="../../../Idea/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/IdeaQuery" data-name="ideaquery">
+      <a href="../../../IdeaQuery.html">IdeaQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/IdeaSerializer" data-name="ideaserializer">
+      <a href="../../../IdeaSerializer.html">IdeaSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/IdeasSerializer" data-name="ideasserializer">
+      <a href="../../../IdeasSerializer.html">IdeasSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/PasswordValidations" data-name="passwordvalidations">
+      <a href="../../../PasswordValidations.html">PasswordValidations</a>
+      
+    </li>
+  
+  <li class=" " data-id="/RequestPasswordReset" data-name="requestpasswordreset">
+      <a href="../../../RequestPasswordReset.html">RequestPasswordReset</a>
+      
+    </li>
+  
+  <li class=" " data-id="/ResetPassword" data-name="resetpassword">
+      <a href="../../../ResetPassword.html">ResetPassword</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SaveIdea" data-name="saveidea">
+      <a href="../../../SaveIdea.html">SaveIdea</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SignInUser" data-name="signinuser">
+      <a href="../../../SignInUser.html">SignInUser</a>
+      
+    </li>
+  
+  <li class=" " data-id="/SignUpUser" data-name="signupuser">
+      <a href="../../../SignUpUser.html">SignUpUser</a>
+      
+    </li>
+  
+  <li class=" " data-id="/TokenPayloadSerializer" data-name="tokenpayloadserializer">
+      <a href="../../../TokenPayloadSerializer.html">TokenPayloadSerializer</a>
+      
+    </li>
+  
+  <li class=" " data-id="/TokenSerializer" data-name="tokenserializer">
+      <a href="../../../TokenSerializer.html">TokenSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/User" data-name="user">
+      <a href="../../../User.html">User</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/User/BaseForm" data-name="user::baseform">
+      <a href="../../../User/BaseForm.html">BaseForm</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/BaseQuery" data-name="user::basequery">
+      <a href="../../../User/BaseQuery.html">BaseQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/PrimaryKeyType" data-name="user::primarykeytype">
+      <a href="../../../User/PrimaryKeyType.html">PrimaryKeyType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/User/SaveOperation" data-name="user::saveoperation">
+      <a href="../../../User/SaveOperation.html">SaveOperation</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/UserFromEmail" data-name="userfromemail">
+      <a href="../../../UserFromEmail.html">UserFromEmail</a>
+      
+    </li>
+  
+  <li class=" " data-id="/UserQuery" data-name="userquery">
+      <a href="../../../UserQuery.html">UserQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="/UserSerializer" data-name="userserializer">
+      <a href="../../../UserSerializer.html">UserSerializer</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/UserToken" data-name="usertoken">
+      <a href="../../../UserToken.html">UserToken</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/UserToken/Settings" data-name="usertoken::settings">
+      <a href="../../../UserToken/Settings.html">Settings</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Api::V1::Users::Ideas
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
