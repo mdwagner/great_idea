@@ -1,18 +1,42 @@
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { Home } from './screens/Home';
-import { Details } from './screens/Details';
-import { Login } from './screens/Login';
+import React, { useState, useEffect } from 'react';
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
+import { Ionicons } from '@expo/vector-icons';
 
-const AppNavigator = createStackNavigator(
-  {
-    Home,
-    Details,
-    Login,
-  },
-  {
-    initialRouteName: 'Login',
+import { Router, Routes, Route } from './components/Router';
+import { BackButton } from './components/BackButton';
+import { Login } from './pages/Login';
+import { Welcome } from './pages/Welcome';
+
+export const App: React.FC = () => {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(
+    () => {
+      (async () => {
+        await Font.loadAsync({
+          Roboto: require('native-base/Fonts/Roboto.ttf'),
+          Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+          ...Ionicons.font,
+        });
+        setIsReady(true);
+      })();
+    },
+    [setIsReady]
+  );
+
+  if (!isReady) {
+    return <AppLoading />;
   }
-);
 
-export const App = createAppContainer(AppNavigator);
+  return (
+    <Router>
+      <BackButton>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/welcome" element={<Welcome />} />
+        </Routes>
+      </BackButton>
+    </Router>
+  );
+}
