@@ -1,23 +1,31 @@
-// import React from 'react';
-// import { View, Text, Button, StyleSheet } from 'react-native';
-// import { NavigationStackScreenProps } from 'react-navigation-stack';
+import React from 'react';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar
+} from '@ionic/react';
+import { ExploreContainer } from '../components/ExploreContainer';
 
-// export const Home: React.FC<NavigationStackScreenProps> = ({ navigation }) => {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Home</Text>
-//       <Button
-//         title="Go to Details"
-//         onPress={() => navigation.navigate('Details')}
-//       />
-//     </View>
-//   );
-// }
+import './Home.css';
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+export const Home: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Blank</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Blank</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <ExploreContainer />
+      </IonContent>
+    </IonPage>
+  );
+};

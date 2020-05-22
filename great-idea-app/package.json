@@ -1,39 +1,51 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "great-idea-app",
+  "description": "An Ionic project",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
-    "expo": "~36.0.0",
-    "expo-font": "~8.0.0",
-    "formik": "^2.1.4",
-    "history": "5.0.0-beta.5",
-    "native-base": "^2.13.8",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-easy-grid": "^0.2.2",
-    "react-native-web": "~0.11.7",
-    "react-router": "6.0.0-alpha.2",
-    "react-router-dom": "6.0.0-alpha.2",
-    "react-router-native": "6.0.0-alpha.2",
-    "yup": "^0.28.1"
+    "@capacitor/core": "1.5.1",
+    "@ionic/react": "^5.0.0",
+    "@ionic/react-router": "^5.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "ionicons": "^5.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "typescript": "3.7.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@types/history": "^4.7.5",
-    "@types/react": "~16.9.0",
-    "@types/react-native": "~0.60.23",
+    "@capacitor/cli": "1.5.1",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
     "@types/react-router": "^5.1.4",
-    "@types/react-router-dom": "^5.1.3",
-    "@types/react-router-native": "^5.1.0",
-    "@types/yup": "^0.26.32",
-    "babel-preset-expo": "~8.0.0",
-    "typescript": "~3.6.3"
+    "@types/react-router-dom": "^5.1.3"
   },
-  "private": true
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
